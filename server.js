@@ -61,6 +61,7 @@ const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 const db = require("./db");
+require("dotenv").config();
 
 // const Person = require("./models/Person");
 // const MenuItem = require("./models/MenuItem");
@@ -162,6 +163,8 @@ app.get("/", function (req, res) {
   res.send("Hello World wel come to the ");
 });
 
-app.listen(3001, () => {
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
   console.log("locol host is running - 3000");
 });
