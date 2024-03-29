@@ -1,0 +1,4 @@
+# Ignore node_modeles directory
+ node_modules/    
+
+# other entries
